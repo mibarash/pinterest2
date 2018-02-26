@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import {Route, Link} from 'react-router-dom'
+
 import './App.css';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Post from './Components/Post/Post';
+import About from './Components/About/About';
+import Test from './Components/Test/Test';
+import Post_Page from './Components/Post_Page/Post_Page';
+
 
 
 class App extends Component {
@@ -34,7 +40,15 @@ class App extends Component {
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <Main posts={this.state.posts}></Main>
+        {/* <Main posts={this.state.posts}></Main> */}
+        {/* <Route path = "/" component={Main} posts={this.state.posts}/> */}
+        <Route
+          exact path='/'
+          render={(props) => <Main {...props} posts={this.state.posts} />}
+        />
+        <Route path = "/About" component={About}/>
+        <Route path = "/post_page" component={Post_Page}/>
+
       </div>
     );
   }
