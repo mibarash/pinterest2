@@ -1,0 +1,25 @@
+.user_list_ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid salmon; */
+    flex-direction: column;
+    height: 2500px;
+}
+
+.user_list_li{
+    width:200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    padding: 10px;
+
+
+}
+
+.user_list_desc{
+    display: flex;
+    justify-content: space-between;    
+}
+

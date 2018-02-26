@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    padding: 20px;
+    align-items: center;
+}
+
+.logo{
+    font-size: 30px;
+    color: #bd081c;
+    flex-grow: 1.5;
+
+}
+
+.menu, .chat, .more{
+    font-size: 20px;
+    color: #555;
+    flex-grow: 1.5;
+    /* border: 1px solid purple; */
+}
+
+.user, .home{
+    font-size: 15px;
+    color: #555;
+    flex-grow: 1.5;
+    /* border: 1px solid blue; */
+}
+
+.search{
+    flex-grow: 5;
+    /* border: 1px solid salmon; */
+    background-color: #99999933;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: none;
+    /* box-sizing: border-box; */
+    color: #555;
+    font-size: 16px;
+    /* font-weight: 600; */
+    line-height: 40px;
+    outline: none;
+    padding: 0 40px 0 52px;
+}
+
+.image{
+    border-radius: 10px;
+}
