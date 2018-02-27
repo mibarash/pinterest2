@@ -19,7 +19,7 @@ class Main extends Component {
        return (
            <div>
                 {/* <ul>{usersList}</ul> */}
-                <Post posts={users}></Post>
+                <Post posts={users} sendIdToApp={this.props.sendIdToApp.bind(this)}></Post>
            </div>
 
        );

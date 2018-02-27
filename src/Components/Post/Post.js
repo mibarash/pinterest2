@@ -4,12 +4,19 @@ import {Link} from 'react-router-dom';
 
 
 class Post extends Component {
+
+  idNum(num) {
+    this.props.sendIdToApp({
+      id: num
+    });
+  }
+
   render(props) {
       const usersList = this.props.posts.map((user, i) => {
         let randNum = Math.round(250 + (Math.random() * 100));
         return (
           <Link to='/post_page'>
-            <li className="user_list_li" key={i}>
+            <li onClick={()=>this.idNum(i)} className="user_list_li" key={i}>
                 <img className="image" src={`https://picsum.photos/200/${randNum}/?image=2${i}`}></img>
                 <div className="user_list_desc">
                   <div>{user.title}</div>

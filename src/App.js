@@ -16,9 +16,18 @@ class App extends Component {
     super();
     this.state ={
       term:"",
-      posts: [{id:1},{id:2}]
+      posts: [{id:1},{id:2}],
+      imageId: {}
     }
   }
+
+  getClickedImageId(data) {
+    console.log(data);
+    this.setState({
+      imageId: data
+    });
+  }
+
   componentDidMount(){
     const postsUrl = "https://jsonplaceholder.typicode.com/posts";
     fetch(postsUrl)
@@ -44,7 +53,9 @@ class App extends Component {
         {/* <Route path = "/" component={Main} posts={this.state.posts}/> */}
         <Route
           exact path='/'
-          render={(props) => <Main {...props} posts={this.state.posts} />}
+          render={(props) => <Main {...props} posts={this.state.posts} 
+            sendIdToApp={this.getClickedImageId.bind(this)}
+            />}
         />
         <Route path = "/About" component={About}/>
         <Route path = "/post_page" component={Post_Page}/>
